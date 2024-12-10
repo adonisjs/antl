@@ -249,8 +249,8 @@ export class I18nManager {
   /**
    * Returns an instance of I18n for a given locale
    */
-  locale(locale: string) {
-    return new I18n(locale, this.#emitter, this)
+  locale(locale?: string) {
+    return new I18n(locale || this.defaultLocale, this.#emitter, this)
   }
 
   /**
